@@ -245,6 +245,38 @@ window.onload = function(){
 }
 
 
+// --------------rating-----------------------
+function ratingStar(star){
+	star.click(function(){
+		var stars = $('.ratingW').find('li')
+		stars.removeClass('on');
+		var thisIndex = $(this).parents('li').index();
+		for(var i=0; i <= thisIndex; i++){
+			stars.eq(i).addClass('on');
+		}
+    putScoreNow(thisIndex+1);
+	});
+}
+
+function putScoreNow(i){
+  $('.scoreNow').html(i);
+}
+
+
+$(function(){
+	if($('.ratingW').length > 0){
+			ratingStar($('.ratingW li a'));
+	}
+});
+
+
+// ---------------write-review-section-----------------------
+$(document).ready(function(){
+  $(".write_review").click(function(){
+    $(".write_review_form").toggle();
+  });
+});
+
 /*--------------accordionHide------------------------------*/
 
 $(document).ready(function(){
@@ -272,6 +304,42 @@ $(document).ready(function(){
     $(".notification").toggle();
   });
 });
+
+
+// product_desc_tab
+// Show the first tab and hide the rest
+$('#tabs-nav li:first-child').addClass('active');
+$('.tab-content').hide();
+$('.tab-content:first').show();
+
+// Click function
+$('#tabs-nav li').click(function(){
+  $('#tabs-nav li').removeClass('active');
+  $(this).addClass('active');
+  $('.tab-content').hide();
+  
+  var activeTab = $(this).find('a').attr('href');
+  $(activeTab).fadeIn();
+  return false;
+});
+
+// /-------------Tooltip-----------------/
+
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+
+options = {
+  "cursorOuter": "circle-basic",
+  "hoverEffect": "circle-move",
+  "hoverItemMove": false,
+  "defaultCursor": false,
+  "outerWidth": 40,
+  "outerHeight": 40
+}
+magicMouse(options);
+
 
 /*-----------Aos_Js------------*/
 
