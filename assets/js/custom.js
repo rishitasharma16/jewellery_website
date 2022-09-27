@@ -70,8 +70,35 @@ var main = function() {
   });
 
 
+// --------------user_account------------------
+   $('#tabs-nav li:first-child').addClass('active');
+$('.tab-content').hide();
+$('.tab-content:first').show();
+
+// Click function
+$('#tabs-nav li').click(function(){
+  $('#tabs-nav li').removeClass('active');
+  $(this).addClass('active');
+  $('.tab-content').hide();
+  
+  var activeTab = $(this).find('a').attr('href');
+  $(activeTab).fadeIn();
+  return false;
+});
+
+/*-----------edit_divshow-------------*/
+
+$(document).ready(function () {
+  $("#btn").click(function () {
+      $("#Create").toggle();
+  });
+});
+
+
+
 
   /*------------testimonial--------------*/
+  
 
   var swiper = new Swiper(".testimonialSwiper", {
     slidesPerView:1,
@@ -322,6 +349,8 @@ $('#tabs-nav li').click(function(){
   $(activeTab).fadeIn();
   return false;
 });
+
+
 
 // /-------------Tooltip-----------------/
 
