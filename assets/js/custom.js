@@ -1,4 +1,6 @@
 
+
+
 /*------------filter--------------*/
 
 $(function () {
@@ -350,7 +352,160 @@ $('#tabs-nav li').click(function(){
   return false;
 });
 
+// modal_video_call
+$(document).ready(function(){
+  $(".modal1").click(function(){
+    $(".modal_hide").toggle();
+  });
+});
 
+
+// --------------from_wizard-----------------
+function validate(val) {
+  v1 = document.getElementById("sub");
+  v2 = document.getElementById("msg");
+
+  flag = true;
+
+  if(val>=1 || val==0) {
+      if(v1.value == "") {
+          v1.style.borderColor = "red";
+          flag = false;
+      }
+      else {
+          v1.style.borderColor = "green";
+          flag = true;
+      }
+  }
+
+  if(val>=2 || val==0) {
+      if(v2.value == "") {
+          v2.style.borderColor = "red";
+          flag = false;
+      }
+      else {
+          v2.style.borderColor = "green";
+          flag = true;
+      }
+  }
+
+  return flag;
+}
+
+$(document).ready(function(){
+
+var current_fs, next_fs, previous_fs;
+
+$(".next").click(function(){
+
+  str1 = "next1";
+  str2 = "next2";
+  str3 = "next3";
+
+  if(!str1.localeCompare($(this).attr('id')) && document.getElementById("customCheck1").checked == 1) {
+      val1 = true;
+  }
+  else {
+      val1 = false;
+  }
+
+  if(!str2.localeCompare($(this).attr('id')) && document.getElementById("sub").value != "") {
+      val21 = true;
+  }
+  else {
+      val21 = false;
+  }
+
+  if(!str2.localeCompare($(this).attr('id')) && document.getElementById("msg").value != "") {
+      val22 = true;
+  }
+  else {
+      val22 = false;
+  }
+
+  if((!str1.localeCompare($(this).attr('id')) && val1 == true) || (!str2.localeCompare($(this).attr('id')) && val21 == true && val22 == true) || !str3.localeCompare($(this).attr('id'))) {
+      current_fs = $(this).parent().parent();
+      next_fs = $(this).parent().parent().next();
+      
+      $(current_fs).removeClass("show");
+      $(next_fs).addClass("show");
+      
+      current_fs.animate({}, {
+          step: function() {
+
+              current_fs.css({
+                  'display': 'none',
+                  'position': 'relative'
+              });
+
+              next_fs.css({
+                  'display': 'block'
+              });
+          }
+      });
+  }
+});
+
+$(".prev").click(function(){
+  
+  current_fs = $(this).parent().parent();
+  previous_fs = $(this).parent().parent().prev();
+  
+  $(current_fs).removeClass("show");
+  $(previous_fs).addClass("show");
+
+  current_fs.animate({}, {
+      step: function() {
+
+          current_fs.css({
+              'display': 'none',
+              'position': 'relative'
+          });
+
+          previous_fs.css({
+              'display': 'block'
+          });
+      }
+  });
+});
+
+});
+
+
+// ------------------calander------------------
+var sameDaylastWeek = new Date().setDate(new Date().getDate() - 7);
+		var someDaynextMonth = new Date().setDate(new Date().getDate() + 31);
+
+		// All dates should be provided in timestamps
+	    	var sampleEvents = [
+			{
+			    title: "Soulful sundays bay area",
+			    date: sameDaylastWeek, // Same day as today, last week
+			    link: "https://www.eventbrite.com/e/soulful-sundays-bay-area-edition-tickets-55214242285?aff=ehomecard"
+			},
+			{
+			    title: "London Comicon",
+			    date: new Date().getTime(), // Today
+			    link: "https://www.eventbrite.co.uk/e/london-film-comic-con-summer-2019-tickets-49472593860?aff=ebdssbdestsearch"
+			},
+			{
+			    title: "Youth Athletic Camp",
+			    date: someDaynextMonth, // Some day as today, next month
+			    link: "https://www.eventbrite.com/e/leaner-stronger-faster-tm-youth-athletic-camp-2021-tickets-38245970728?aff=ebdssbdestsearch"
+			}
+	    	];
+
+		$(document).ready(function(){
+			$("#calendar").MEC({
+				events: sampleEvents
+			});
+
+			// Make calendar start on monday
+			$("#calendar2").MEC({
+				from_monday: true,
+				events: sampleEvents
+			});
+		});
 
 // /-------------Tooltip-----------------/
 
@@ -379,20 +534,16 @@ AOS.init({
 
 /*----------Login-----------*/
 
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+// const signUpButton = document.getElementById('signUp');
+// const signInButton = document.getElementById('signIn');
+// const container = document.getElementById('container');
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
+// signUpButton.addEventListener('click', () => {
+// 	container.classList.add("right-panel-active");
+// });
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
-
-
-
-
+// signInButton.addEventListener('click', () => {
+// 	container.classList.remove("right-panel-active");
+// });
 
 
