@@ -364,6 +364,9 @@ $(document).ready(function(){
 function validate(val) {
   v1 = document.getElementById("sub");
   v2 = document.getElementById("msg");
+  v3 = document.getElementById("lname");
+  v4 = document.getElementById("email");
+  v5 = document.getElementById("mobileno");
 
   flag = true;
 
@@ -388,6 +391,40 @@ function validate(val) {
           flag = true;
       }
   }
+
+  if(val>=3 || val==0) {
+    if(v3.value == "") {
+        v3.style.borderColor = "red";
+        flag = false;
+    }
+    else {
+        v3.style.borderColor = "green";
+        flag = true;
+    }
+
+    if(val>=4 || val==0) {
+    if(v4.value == "") {
+        v4.style.borderColor = "red";
+        flag = false;
+    }
+    else {
+        v4.style.borderColor = "green";
+        flag = true;
+    }
+  }
+
+  if(val>=5 || val==0) {
+    if(v5.value == "") {
+        v5.style.borderColor = "red";
+        flag = false;
+    }
+    else {
+        v5.style.borderColor = "green";
+        flag = true;
+    }
+  }
+
+}
 
   return flag;
 }
@@ -471,6 +508,14 @@ $(".prev").click(function(){
 
 });
 
+// --------------try_at_home_all_design----------------
+
+$(document).ready(function(){
+  $(".cancel_btn").click(function(){
+    $(".try_card").hide();
+  });
+});
+
 
 // ------------------calander------------------
 var sameDaylastWeek = new Date().setDate(new Date().getDate() - 7);
@@ -506,6 +551,14 @@ var sameDaylastWeek = new Date().setDate(new Date().getDate() - 7);
 				events: sampleEvents
 			});
 		});
+
+
+// -----------------confirm_otp----------------
+$(document).ready(function(){
+  $(".confirm_btn").click(function(){
+    $("p").toggle();
+  });
+});
 
 // /-------------Tooltip-----------------/
 

@@ -531,19 +531,9 @@ p.section-text {
  font-size: 15px;
 }
 
-.view_more{
-  background: #c59d58;
-  border-radius: 60px;
-  padding: 10px 12px;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  width: 166px;
-  display: block;
-}
-.view_more:hover{
-  color: #000;
-  letter-spacing: 0.65px;
+
+#view_more{
+  font-family: 'Mulish';
 }
 
 /*----------------Order_shiping-----------*/
@@ -3192,9 +3182,8 @@ textarea{
   letter-spacing:0.3px;
 }
 
-.try_at_home_details{
-  padding: 100px 0;
-  margin-top: 148px;
+.try_at_home_detail{
+  padding:100px 0;
 }
 
 /* your CSS goes here*/
@@ -3385,6 +3374,11 @@ button:hover {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
+  
+}
+
+.try_card_body p{
+  display: block !important;
 }
 
 .design_side h5{
@@ -3435,6 +3429,8 @@ button:hover {
 .card_form {
   display: none;
   border: 1px solid #e1e3ff;
+  
+
 }
 
 
@@ -3447,17 +3443,43 @@ button:hover {
 
 .step-box {
   padding: 10px;
-  
+  position: relative;
   background-color: #fff;
 }
 
-.active {
-  background-color: #2196F3;
-  color: #fff !important;
-  border-left: 1px solid #2196F3;
-  border-right: 1px solid #2196F3;
+.step-box .step-title{
+  font-family: 'Mulish';
+    color: #bfbfbf;
+    font-weight: 600;
 }
-
+.active .step-title{
+  color: #02b387;
+}
+.step-box::before{
+  content: "";
+  position: absolute;
+  right: -38px;
+  top: 25px;
+  width: 75px;
+  height: 3px;
+  background-color: #f1f1f1;
+  z-index: 2;
+}
+.cancel_btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding:10px;
+  background-size: 10px;
+  background-color: transparent;
+}
+.step-box.active::before {
+  background-color: #02b387;
+   
+}
+.step-box:last-child::before{
+  display: none;
+}
 .active .fa-circle {
   background-color: #fff !important;
   color: #2196F3;
@@ -3565,10 +3587,10 @@ button:hover {
   color: #fff;
   border: 1px solid #b3873b;
 }
-.confirm svg{
+.date_time svg{
   width: 16px;
 }
-.confirm{
+.date_time{
   text-align: left;
   font-size: 16px;
 }
@@ -3592,6 +3614,84 @@ button:hover {
   overflow: hidden;
 }
 
+.card_form button:focus{
+  border: 1px solid #b3873b !important;
+}
+
+/* ---------otp_verify------------ */
+.modal-content {
+  width: 58%;
+}
+
+.verify_modal{
+  text-align: center;
+}
+
+.verify_modal input{
+  padding: 0px;
+  border-radius:0;
+  margin:15px 0;
+  background-color: #eee;
+}
+
+.verify_modal input:focus{
+  background-color:#eee;
+  box-shadow: none !important;
+  border:none !important;
+  text-align: center;
+}
+
+.resend{
+  color: #b3873b;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  font-size: 13px;
+  
+}
+.resend:hover{
+  font-weight: 600;
+  color: #b3873b;
+}
+
+.verify_modal p .resend{
+  margin: 20px 0;
+  letter-spacing:1px;
+}
+
+.verify_modal button{
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 15px;
+  font-family: 'Mulish';
+  background: #b3873b;
+  border: 1px solid #b3873b;
+  color: #fff;
+  /* margin-right: 5px; */
+  margin: 0 5px 20px 0;
+  -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.verify_modal button:hover{
+  background: #000;
+  color: #b3873b;
+  letter-spacing: 0.65px;
+}
+
+#change_num{
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing:0.5px;
+  margin:20px 0 10px 0;
+}
+
+#change_num a{
+  color:#b3873b;
+  font-weight: 400;
+  margin-left: 3px;
+}
+
+
 /* ----------calander---------- */
 #wrapper{
   padding: 40px;
@@ -3609,7 +3709,87 @@ button:hover {
   text-align: center;
 }
 
-@media only screen and (max-width: 500px){
+#monthYear{
+  font-size: 14px;
+}
+
+#calTitle{
+  font-size: 14px;
+  padding: 0 !important;
+}
+
+#calTitle button{
+  line-height: 0 !important;
+}
+
+#calThead{
+  margin-top:7px !important;
+  font-size: 14px !important;
+  padding:0 !important;
+}
+
+#calThead>div{
+  font-size: 12px !important;
+  padding: 0 !important;
+}
+
+#calbody{
+  padding: 0 !important;
+}
+
+#calTFooter{
+  display: none !important;
+}
+#calTbody .a-date{
+  line-height: 0 !important;
+  font-size: 14px !important;
+}
+#wrapper{
+  padding: 0 !important;
+}
+[id^=calendar], [id^=calendar] + h3 {
+  width: 348px !important;
+}
+#staticBackdrop .modal-dialog{
+  width: 375px;
+}
+
+
+
+.mini-cal {
+  background: #fff !important;
+  color: #22252e !important;
+}
+#calTbody .a-date>span {
+  color: #000;
+}
+#calTbody .a-date.current.event.focused {
+  background-color: #b3873b !important;
+  color: #fff !important;
+  border-color: #b3873b !important;
+  border-radius: 5px;
+}
+.blurred span{
+  color: #979797 !important;
+}
+#calTitle button {
+  width: 30px !important;
+  height: 30px !important;
+  background-color: #c59d58 !important;
+}
+
+.calander_btn{
+  display: flex;
+  justify-content: end;
+  
+}
+.calander_btn button{
+  border-radius:none !important;
+}
+#calTbody .a-date.focused, #calTbody .a-date:active {
+  background: #c59d58 !important;
+}
+/* @media only screen and (max-width: 500px){
   #wrapper{
     padding: 1em;
     display: block;
@@ -3633,4 +3813,4 @@ button:hover {
       display: block;
       float: none;
   }
-}
+} */

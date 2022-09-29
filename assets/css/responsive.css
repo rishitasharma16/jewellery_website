@@ -13,7 +13,12 @@
     }
 }
 
-@media (max-width:1360px) {}
+@media (max-width:1360px) {
+    #staticBackdrop .modal-content{
+        width:inherit;
+
+      }
+}
 
 @media (max-width: 1080px) {
     .footer_menu>ul {
@@ -119,6 +124,27 @@
     .error_btn{
         width: 50%;
       }
+
+      .card_form{
+        border: 0;
+      }
+
+      .date_btn_group label, .date_btn_group button{
+        color:#b3873b;
+        font-size: 12px;
+        background-color: transparent;
+       }
+       .date_btn_group label:hover, .date_btn_group button:hover{
+         background: #b3873b !important;
+         color: #fff;
+       }
+
+       .step-box::before{
+        right: -30px;
+        width:50px;
+       
+      }
+      
 }
 
 
@@ -352,9 +378,23 @@
         font-weight: bold;
         
       }
+
+      .btn-check:checked+.btn-outline-primary {
+        border: 1px solid #b3873b;
+      }
+
+      .step-box::before{
+        width:70px;
+      }
+
+     
 }
 
 @media (max-width: 768px) {
+
+    .try_at_home_detail .container{
+        max-width: 100%;
+    }
 
     .categories-list-blog img,
     .categories-list-blog2 img {
@@ -441,9 +481,24 @@
         width:55%;
       }
       
+      .card_form{
+        border: 0 !important;
+      }
+      .date_btn_group label, .date_btn_group button{
+        padding: 0 !important;
+        border: 1px solid #b3873b;
+      }
+      .btn-check:checked+.btn-outline-primary {
+        border: 1px solid #b3873b;  
+    }
+
+    .card_form button:focus{
+        border: 2px solid #b3873b !important;
+      }
 }
 
 @media (max-width: 600px) {
+    
     .upheader>div {
         margin-bottom: 0;
     }
@@ -537,6 +592,16 @@
         border-left: 0;
        
       }
+
+      [id^=calendar], [id^=calendar] + h3 {
+        width: 320px !important;
+      }
+      #staticBackdrop .modal-dialog{
+        max-width: 100%;
+      }
+      #staticBackdrop .modal-content{
+        width: 95%;
+      }
 }
 
 @media (max-width: 480px) {
@@ -586,13 +651,17 @@
 
 
 
-.blog_icon{
-    margin-top:10px;
-}
-  .blog_tags {
-    flex-wrap: wrap;
-    
-  }
+        .blog_icon{
+            margin-top:10px;
+        }
+        .blog_tags {
+            flex-wrap: wrap;
+            
+        }
+
+        .step-box::before{
+            width:50px;
+          }
 
 }
 
@@ -609,7 +678,18 @@
       .error_page h1{
           color: #000;
       }
-    
+
+     
+      .btn-check:checked+.btn-outline-primary {
+        background-color: #b3873b;
+        border: 1px solid #b3873b;
+        box-shadow: none;
+    }
+
+    .step-box::before{
+        width:40px;
+        right: -20px;
+      }
      
 }
 

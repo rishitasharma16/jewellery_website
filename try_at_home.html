@@ -296,31 +296,27 @@
       <section class="try_at_home_detail">
         <div class="container">
           <div class="row try_at_row">
-            <div class="col-md-6 booking_side">
+            <div class="col-md-12 col-sm-12 col-lg-6 booking_side ">
               <h5 class="text-center" id="register">Booking Information</h5>
               <!-- step1 -->
               <div class="card b-0 rounded-0 show card_form">
-                <div class="row  mx-auto text-center step-container">
+                <div class="row  mx-auto text-center justify-content-center step-container">
                   <div class="col-md-3 col-4 step-box active">
-                    <h6 class="step-title-0">
+                    <h6 >
                       <span class="step-title">Step 1</span>
                     </h6>
                   </div>
                   <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
+                    <h6 >
                       <span class="step-title">Step 2</span>
                     </h6>
                   </div>
                   <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
+                    <h6 >
                       <span class="step-title">Step 3</span>
                     </h6>
                   </div>
-                  <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
-                      <span class="step-title">Step 4</span>
-                    </h6>
-                  </div>
+                 
                 </div>
                 <div class="px-4 py-5 justify-content-center text-center">
                   <div class="row justify-content-center">
@@ -340,27 +336,23 @@
 
               <!-- step2 -->
               <div class="card b-0 rounded-0 card_form">
-                <div class="row  mx-auto text-center step-container">
+                <div class="row  mx-auto text-center justify-content-center step-container">
                   <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
+                    <h6 >
                       <span class="step-title">Step 1</span>
                     </h6>
                   </div>
                   <div class="col-md-3 col-4 step-box active">
-                    <h6 class="step-title-0">
+                    <h6 >
                       <span class="step-title">Step 2</span>
                     </h6>
                   </div>
                   <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
+                    <h6 >
                       <span class="step-title">Step 3</span>
                     </h6>
                   </div>
-                  <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
-                      <span class="step-title">Step 4</span>
-                    </h6>
-                  </div>
+                 
                 </div>
                 <div class="px-4 py-5 justify-content-center text-center">
                   <div class="row  justify-content-center">
@@ -371,16 +363,16 @@
                             onblur="validate(1)">
                         </div>
                         <div class="col-lg-6 form-group ">
-                          <input type="text" id="sub" name="subject" placeholder="Last Name" class="form-control"
-                            onblur="validate(1)">
+                          <input type="text" id="lname" name="lname" placeholder="Last Name" class="form-control"
+                            onblur="validate(2)">
                         </div>
                         <div class="col-lg-6 form-group ">
-                          <input type="text" id="sub" name="subject" placeholder="Email" class="form-control"
-                            onblur="validate(1)">
+                          <input type="email" id="email" name="email" placeholder="Email" class="form-control"
+                            onblur="validate(3)">
                         </div>
                         <div class="col-lg-6 form-group ">
-                          <input type="text" id="sub" name="subject" placeholder="Mobile No" class="form-control"
-                            onblur="validate(1)">
+                          <input type="number" id="mobileno" name="mobile" placeholder="Mobile No" class="form-control"
+                            onblur="validate(4)" required>
                         </div>
                         <div class="form-group ">
                           <textarea type="textarea" id="msg" name="message" placeholder="Address" class="form-control"
@@ -396,32 +388,28 @@
 
               <!-- step3 -->
               <div class="card b-0 rounded-0 card_form">
-                <div class="row  mx-auto text-center step-container">
+                <div class="row  mx-auto text-center justify-content-center step-container">
                   <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
+                    <h6>
                       <span class="step-title">Step 1</span>
                     </h6>
                   </div>
                   <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
+                    <h6 >
                       <span class="step-title">Step 2</span>
                     </h6>
                   </div>
                   <div class="col-md-3 col-4 step-box active">
-                    <h6 class="step-title-0">
+                    <h6 >
                       <span class="step-title">Step 3</span>
                     </h6>
                   </div>
-                  <div class="col-md-3 col-4 step-box ">
-                    <h6 class="step-title-0">
-                      <span class="step-title">Step 4</span>
-                    </h6>
-                  </div>
+                 
                 </div>
-                <div class="px-4 py-3 justify-content-center text-center">
+                <div class="px-0 px-lg-4 py-3 justify-content-center text-center">
                   <div class="row d-flex justify-content-center">
                     <div class="mb-3">
-                      <p class="confirm">Select a Date and Time</p>
+                      <p class="date_time">Select a Date and Time</p>
                     </div>
 
                     <div class="btn-group date_btn_group mb-3 justify-content-start" role="group"
@@ -429,24 +417,24 @@
                       <div class="day_select">
                         <input type="radio" class="btn-check" name="datebtn" id="datebtn6" autocomplete="off" checked>
                         <label class="btn btn-outline-primary " for="datebtn6"><span
-                            class="d-block">MON</span>04</label>
+                            class="d-block">Mon</span>04</label>
                       </div>
                       <div class="day_select">
                         <input type="radio" class="btn-check" name="datebtn" id="datebtn7" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="datebtn7"><span class="d-block">TUE</span>05</label>
+                        <label class="btn btn-outline-primary" for="datebtn7"><span class="d-block">Tue</span>05</label>
                       </div>
                       <div class="day_select">
                         <input type="radio" class="btn-check" name="datebtn" id="datebtn8" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="datebtn8"><span class="d-block">WED</span>06</label>
+                        <label class="btn btn-outline-primary" for="datebtn8"><span class="d-block">Wed</span>06</label>
                       </div>
                       <div class="day_select">
                         <input type="radio" class="btn-check" name="datebtn" id="datebtn9" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="datebtn9"><span class="d-block">THU</span>07</label>
+                        <label class="btn btn-outline-primary" for="datebtn9"><span class="d-block">Thu</span>07</label>
                       </div>
                       <div class="day_select">
                         <input type="radio" class="btn-check" name="datebtn" id="btnradio10" autocomplete="off">
                         <label class="btn btn-outline-primary" for="btnradio10"><span
-                            class="d-block">FRI</span>08</label>
+                            class="d-block">Fri</span>08</label>
                       </div>
                       <div class="day_select">
                         <button class="btn btn-outline-primary" id="view_more" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><span
@@ -454,77 +442,42 @@
                       </div>
                     </div>
 
-                    <div class="btn-group date_btn_group mb-3" role="group"
+                    <div class="btn-group date_btn_group mb-3 " role="group"
                       aria-label="Basic radio toggle button group">
                       <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                      <label class="btn btn-outline-primary " for="btnradio1">12:00 PM</label>
+                      <label class="btn btn-outline-primary " for="btnradio1"><span class="d-sm-block d-md-block d-lg-inline">12:00</span> Pm</label>
 
                       <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                      <label class="btn btn-outline-primary" for="btnradio2">01:30 PM</label>
+                      <label class="btn btn-outline-primary" for="btnradio2"><span class="d-sm-block d-md-block d-lg-inline">01:30</span> Pm</label>
 
                       <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                      <label class="btn btn-outline-primary" for="btnradio3">03:00 PM</label>
+                      <label class="btn btn-outline-primary" for="btnradio3"><span class="d-sm-block d-md-block d-lg-inline">03:00</span> Pm</label>
 
                       <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                      <label class="btn btn-outline-primary" for="btnradio4">05:00 PM</label>
+                      <label class="btn btn-outline-primary" for="btnradio4"><span class="d-sm-block d-md-block d-lg-inline">05:00</span> Pm</label>
 
                       <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
-                      <label class="btn btn-outline-primary" for="btnradio5">07:00 PM</label>
+                      <label class="btn btn-outline-primary" for="btnradio5"><span class="d-sm-block d-md-block d-lg-inline">07:00</span> Pm</label>
                     </div>
 
                   </div>
                   <button class="next_btn rounded-0 back_btn prev">Back</button>
-                  <button id="next3" class="next_btn rounded-0  next">Confirm</button>
-                </div>
-              </div>
-
-
-              <!-- step4 -->
-              <div class="card b-0 rounded-0 card_form">
-                <div class="row  mx-auto text-center step-container">
-                  <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
-                      <span class="step-title">Step1</span>
-                    </h6>
-                  </div>
-                  <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
-                      <span class="step-title">Step2</span>
-                    </h6>
-                  </div>
-                  <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
-                      <span class="step-title">Step3</span>
-                    </h6>
-                  </div>
-                  <div class="col-md-3 col-4 step-box">
-                    <h6 class="step-title-0">
-                      <span class="step-title">Step4</span>
-                    </h6>
-                  </div>
-                </div>
-                <div class="p-3 justify-content-center text-center">
-                  <h3 class="heading">Thank You for your Feedback!</h3>
-                  <div class="row justify-content-center">
-                    <div class="">
-                      <img src="https://i.imgur.com/4Y9xMCF.gif" class="fit-image mb-5">
-                    </div>
-                  </div>
+                  <button  class="next_btn rounded-0  next " data-bs-toggle="modal" data-bs-target="#confirmModal">Confirm</button>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-6 design_side">
+            <div class="col-md-12 col-sm-12 col-lg-6 design_side">
               <h5 class="text-center">All Design Available</h5>
-              <div class="card try_card">
+              <div class="card try_card position-relative" >
+                <button type="button" class="btn-close cancel_btn " data-bs-dismiss="modal" aria-label="Close"></button>
                 <img
                   src="https://cdn.caratlane.com/media/catalog/product/cache/6/small_image/200x200/9df78eab33525d08d6e5fb8d27136e95/U/U/UU00014-YG0000_1_lar.jpg"
                   class="card-img-top" alt="...">
                 <div class="card-body try_card_body">
-                  <p class="card-title">Pendent</p>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  <p >Pendent</p>
+                  <p >Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                  <a href="#" class="">Remove</a>
                 </div>
               </div>
             </div>
@@ -598,26 +551,43 @@
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
+                  <div class="modal-body p-2">
                     <div id="wrapper">
                       <div>
-                        <div id="calendar2"></div>
+                        <div id="calendar"></div>
                        
                       </div>
                     </div>
+                    <div class="calander_btn">
+                    <button type="button" class="next_btn  mx-1 back_btn" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="next_btn ">Apply</button>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
                   </div>
                 </div>
               </div>
             </div>
          <!-- modal_date-->
+
+         <!-- modal_confirm_otp -->
+
+         <!-- Button trigger modal -->
+
+          <!-- Modal -->
+          <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered justify-content-center">
+              <div class="modal-content">
+                <div class="modal-body verify_modal">
+                  <p>Enter the 6 digit OTP to confirm your appointment</p>
+                  <p id="change_num" >7845213698 <a href="#">Change Number</a></p>
+                  <input type="text" class="form-control">
+                  <button class="verfiy" type="submit">Verify Your Appoinment</button>
+                  <p><a href="" class="resend">Resend OTP</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+         <!-- modal_confirm_otp -->
+
   <!--Script-->
 
   <!--[if lt IE 9]>
