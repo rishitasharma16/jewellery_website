@@ -213,6 +213,10 @@ label {
   width: 18px;
 }
 
+/* ------------login_dropdown------------ */
+
+
+
 /*--------------Banner----------------*/
 .banner {
   height: 100vh;
@@ -1786,6 +1790,10 @@ textarea {
   color: #fff;
 }
 
+.ad_tocart a{
+  color: #fff !important;
+}
+
 .ad_tocart svg {
   width: 18px;
   line-height: 0;
@@ -1941,19 +1949,72 @@ textarea {
   transform: translateX(50%);
 }
 
+.login-form{
+  height:475px;
+  overflow: auto;
+  padding-right: 20px;
+}
+
+.login-form h1{
+  font-size:32px;
+  padding: 15px 0 10px 0;
+}
+
+.socia-container{
+  display: flex;
+  justify-content: center;
+
+}
+
+#create{
+  display: none;
+  position: absolute;
+}
+
+.form_div{
+  position: relative;
+}
+
+.socia-container .social{
+  color:#666;
+  margin: 10px ;
+}
+
+.login-form span{
+  font-size: 14px;
+  display: block;
+  margin: 10px 0;
+  text-align: center !important;
+}
+
+.login-form p{
+  text-align: center;
+  margin-top:25px;
+} 
+
+.login-form p a{
+  color: #b3873b;
+  font-weight: bold;
+  text-decoration: underline !important;
+  text-underline-offset:5px;
+} 
+
+
+
 .login_body .overlay-panel {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 0 0px;
   text-align: center;
   top: 0;
   height: 100%;
-  width: 50%;
+  width: 52%;
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
+  object-fit: cover;
 }
 
 .login_body .overlay-left {
@@ -3177,6 +3238,43 @@ input[type=range]:focus::-ms-fill-upper {
 
 
 /* -----------------user_account--------------- */
+
+.dropdown-toggle::after{
+  display: none !important;
+}
+.user_dropdown{
+  line-height: 0 !important;
+}
+
+#dropdownMenuButton1:hover .user_dropdown_menu{
+    display: block;
+}
+
+.user_dropdown .dropdown-item{
+  display: block;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color:#666;
+}
+
+.user_dropdown .dropdown-item:hover{
+  color:#b3873b;
+  background: transparent;
+}
+
+.user_dropdown a{
+  color:#666;
+  font-size: 16px;
+}
+.user_dropdown button{
+  border: none !important;
+  font-size: 16px;
+  padding: 0 8px;
+  background: none !important;
+}
+
+
 
 /* Tabs */
 .user_account_section {

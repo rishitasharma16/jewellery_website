@@ -27,6 +27,20 @@ var main = function() {
   $(document).ready(main); 
 
 
+  // -------------login_section------------------
+  $(document).ready(function(){
+    $("#signIn").click(function(){
+      $("#create").show();
+      $('#login_').hide();
+    });
+
+    $('#signup_').click(function(){
+      $("#create").hide();
+      $('#login_').show();
+    })
+  });
+
+
   /*------------banner_slider------------------*/
 
   var swiper = new Swiper(".bannerSwiper", {
@@ -567,15 +581,7 @@ $(document).ready(function(){
 });
 
 
-options = {
-  "cursorOuter": "circle-basic",
-  "hoverEffect": "circle-move",
-  "hoverItemMove": false,
-  "defaultCursor": false,
-  "outerWidth": 40,
-  "outerHeight": 40
-}
-magicMouse(options);
+
 
 
 /*-----------Aos_Js------------*/
@@ -587,16 +593,25 @@ AOS.init({
 
 /*----------Login-----------*/
 
-// const signUpButton = document.getElementById('signUp');
-// const signInButton = document.getElementById('signIn');
-// const container = document.getElementById('container');
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
 
-// signUpButton.addEventListener('click', () => {
-// 	container.classList.add("right-panel-active");
-// });
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
 
-// signInButton.addEventListener('click', () => {
-// 	container.classList.remove("right-panel-active");
-// });
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
 
 
+options = {
+  "cursorOuter": "circle-basic",
+  "hoverEffect": "circle-move",
+  "hoverItemMove": false,
+  "defaultCursor": false,
+  "outerWidth": 40,
+  "outerHeight": 40
+}
+magicMouse(options);

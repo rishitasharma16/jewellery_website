@@ -39,11 +39,11 @@
             <span class="up_pin"><i data-feather="map-pin"></i></span>
             <button class="submit" type="button">Submit</button>
           </div>
-          <div>
-            <a href="javascript:void(0);"><i data-feather="facebook"></i></a>
-            <a href="javascript:void(0);"><i data-feather="twitter"></i></a>
-            <a href="javascript:void(0);"><i data-feather="instagram"></i></a>
-          </div>
+         <div>
+          <a href="javascript:void(0);"><i data-feather="facebook"></i></a>
+          <a href="javascript:void(0);"><i data-feather="twitter"></i></a>
+          <a href="javascript:void(0);"><i data-feather="instagram"></i></a>
+         </div>
         </div>
         <nav id="navigation1" class="navigation">
           <div class="nav-header">
@@ -262,20 +262,63 @@
             <div class="nav-search-button"><i data-feather="search"></i></div>
             <form>
               <div class="nav-search-inner">
-                <input type="search" name="search" placeholder="Search..." />
+                <input type="search" name="search" placeholder="Search..."/>
               </div>
             </form>
-            <a href="login.html" class="extra_nav position-relative"><i data-feather="user"></i></a>
+           
+
+            <div class="dropdown user_dropdown">
+              <button class=" dropdown-toggle user_btn" type="button" id="dropdownMenuButton1"  data-bs-toggle="dropdown" aria-expanded="false">
+                <i data-feather="user"></i>
+                    Hi, Arindam!    
+             
+              </button>
+              <ul class="dropdown-menu user_dropdown_menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="user_account.html">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                
+              </ul>
+            </div>
             <a href="wishlist.html" class="extra_nav position-relative">
               <i data-feather="heart"></i>
               <span>15</span>
             </a>
-            <a href="javascript:void(0);" class="extra_nav position-relative">
+            <a href="javascript:void(0);" class="extra_nav position-relative ">
               <i data-feather="shopping-bag"></i>
               <span>15</span>
             </a>
+            <a href="javascript:void(0);" class="extra_nav position-relative bell_hover">
+              <i data-feather="bell"></i>
+              <span>5</span>
+              <div class="notification">
+                <div class="notification_hide">
+                  <div class="nit_text">
+                    <i data-feather="bell" class="bell_icon"></i>
+                    <p> Lorem ipsum dolor sit amet check consectetur adipisicing. </p>
+                  </div>
+                  <div class="nit_text">
+                    <i data-feather="bell" class="bell_icon"></i>
+                    <p> Lorem ipsum dolor sit amet check consectetur adipisicing. </p>
+                  </div>
+                  <div class="nit_text">
+                    <i data-feather="bell" class="bell_icon"></i>
+                    <p> Lorem ipsum dolor sit amet check consectetur adipisicing. </p>
+                  </div>
+                  <div class="nit_text">
+                    <i data-feather="bell" class="bell_icon"></i>
+                    <p> Lorem ipsum dolor sit amet check consectetur adipisicing. </p>
+                  </div>
+                  <div class="nit_text">
+                    <i data-feather="bell" class="bell_icon"></i>
+                    <p> Lorem ipsum dolor sit amet check consectetur adipisicing. </p>
+                  </div>
+                 </div>
+               </div>
+               
+            </a>
           </div>
         </nav>
+      
       </div>
     </div>
   </header>
